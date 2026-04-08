@@ -1,0 +1,289 @@
+body{
+    background-image: url(images/bgbg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:1600px;
+    background-position: center;
+    max-height: 20%;
+}
+
+.logos{
+  width:70px;
+  height:75px;
+  margin-top:-65px;
+  margin-top:px;
+  margin-left:-3px;
+  margin-right:40px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.tagline{
+  font-size:100;
+   margin-top:100;
+   margin-left:40;
+   font-weight:bold;
+   font-family:'Orbitron', sans-serif;
+   color: white;
+}
+.tag2{
+  font-size:25;
+  color: white;
+  font-family:'Poppins',sans-serif;
+  font-style: italic;
+}
+.joram{
+   font-size:30;
+    margin-left:400px;
+     margin-top:70px;
+    color:white;
+     background-position:center left;
+     padding:10px 20px;
+     width:835px;
+     background: rgba(0,0,0,0.25);
+     backdrop-filter: blur(5px);
+     border-radius:12px;
+     mask-image:linear-gradient(to right,transparent,black 15%,black 85%,transparent);
+   font-family:'Poppins',sans-serif;
+    font-style: italic;
+}
+.cuasay{
+     font-size:30;
+     margin-left:400px;
+     color:white; 
+     background-position:center left;
+     padding:10px 20px;
+     width:835px;
+      background: rgba(0,0,0,0.25);
+     backdrop-filter: blur(5px);
+     border-radius:12px;
+     mask-image:linear-gradient(to right,transparent,black 15%,black 85%,transparent);
+	font-family:'Poppins',sans-serif;
+	font-style: italic;
+}
+
+.navbar{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  background-color:#ffd700;
+  padding:20px 30px;
+  color: white; 
+  margin-top:-3px;
+  width:100%;
+  background-attachment:fixed;
+  font-family:'Poppins',sans-serif;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.nav-links a:hover{
+  color:white;
+  text-shadow: 0 0 15px #FOFFFF;
+}
+
+.nav-links a:hover::after{
+  width: 100%;
+}
+
+footer {
+      background:black;
+       text-align:center;
+      padding: 20px;
+      margin-top:155px;
+      font-size:medium;
+      width:100%;
+	font-family:'Poppins',sans-serif;
+    }
+
+.allright{
+	margin-top:12px;
+	color:white;
+	text-align:center;
+}
+.icons{
+    display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom:10px;
+	margin-top:-10px;
+}
+
+.icons a{
+    	width:45px;
+	height: 45px;
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	color:#ffffff;
+	font-size:22px;
+	text-decoration:none;
+	background: rgba(255, 255, 255,0.12);
+	backdrop-filter:blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	transition: all 0.4s ease;
+}
+
+.icons a:hover{
+    background:#F0FFFF;
+    color:#ffd700;
+    transform:scale(1.1);
+}
+
+.info {
+    padding: 40px;             
+    margin: 30px auto;         
+    max-width: 1300px;          
+    background: rgba(0, 0, 0, 0.6); 
+    color: white;            
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+.info{
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem;
+  width:1500px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 70px;
+}
+
+@property --angle{
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+.info::after, .info::before{
+	content: "";
+	position:absolute;
+	height:102%;
+	width: 102%;
+	background-image: conic-gradient(from var(--angle), transparent 70%, #FFD700, #FAEBD7, #FF8C00, #FF7F50, #FFD700, #FFFF00);
+	top:50%;
+	left:50%;
+	translate: -50% -50%;
+	z-index: -1;
+	padding: 3px;
+	border-radius: 10px;
+	animation: 4s spin linear infinite;
+}
+.info::before{
+	filter: blur(1.5rem);
+	opacity:0.5;
+}
+@keyframes spin{
+	from{ --angle: 0deg; }
+	to{ --angle: 360deg; }
+}
+
+.hehe{
+	font-weight:bold;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 480px) {
+    body { background-size: cover; overflow-x: hidden; }
+    .navbar {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        height: auto;
+    }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .nav-links a { font-size: 13px; }
+    .logos { margin-top: 5px; width: 50px; height: 55px; }
+    .info {
+        width: 95%;
+        max-width: 95%;
+        padding: 1rem;
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+    footer { margin-top: 40px; height: auto; }
+    .icons { margin-left: 0; }
+    .allright { margin-left: 0; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    body { background-size: cover; overflow-x: hidden; }
+    .navbar {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 12px 20px;
+        height: auto;
+    }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .nav-links a { font-size: 15px; }
+    .info {
+        width: 92%;
+        max-width: 92%;
+        padding: 1.2rem;
+        font-size: 1rem;
+        margin-top: 40px;
+    }
+    footer { margin-top: 60px; height: auto; }
+    .icons { margin-left: 0; }
+    .allright { margin-left: 0; }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    body { background-size: cover; overflow-x: hidden; }
+    .navbar {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px 25px;
+    }
+    .nav-links { gap: 25px; }
+    .nav-links a { font-size: 16px; }
+    .info {
+        width: 90%;
+        max-width: 90%;
+        font-size: 1.1rem;
+        margin-top: 50px;
+    }
+    footer { margin-top: 100px; height: auto; }
+    .icons { margin-left: 0; }
+    .allright { margin-left: 0; }
+}
+
+@media (min-width: 1280px) {
+    body { background-size: cover; }
+    .navbar { width: 100%; margin-left: 0; }
+    footer { width: 100%; margin-left: 0; height: auto; margin-bottom: 0; }
+    .icons { margin-left: 0; }
+    .allright { margin-left: 0; }
+}

@@ -1,0 +1,336 @@
+body{
+    background-image: url(images/ngi.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+.logos{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffd700;
+    padding: 0px 25px;
+    color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.4s;
+}
+
+.nav-links a:hover{
+    color: white;
+    text-shadow: 0 0 15px #F0FFFF;
+}
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+    font-size: medium;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.allright{
+    margin-top: 12px;
+    color: white;
+    text-align: center;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+.icons a{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 22px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: all 0.4s ease;
+}
+
+.icons a:hover{
+    background: #F0FFFF;
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* ---- All gallery images same size ---- */
+.gallery img, .agallery img, .gemgallery img,
+.libgallery img, .aqugallery img, .phogallery img,
+.pisgallery img, .leogallery img, .virgogallery img,
+.scorpiogallery img, .sagittariusgallery img, .capricorngallery img,
+.oriongallery img, .ursagallery img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.gallery img:hover, .agallery img:hover, .gemgallery img:hover,
+.libgallery img:hover, .aqugallery img:hover, .phogallery img:hover,
+.pisgallery img:hover, .leogallery img:hover, .virgogallery img:hover,
+.scorpiogallery img:hover, .sagittariusgallery img:hover,
+.capricorngallery img:hover, .oriongallery img:hover, .ursagallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ---- Row 1: Cancer, Aries, Gemini ---- */
+.gallery img       { margin: 80px 0 0 160px; }
+.agallery img      { margin-left: 560px; margin-top: -220px; }
+.gemgallery img    { margin-left: 960px; margin-top: -220px; }
+
+/* ---- Row 2: Libra, Aquarius, Taurus ---- */
+.libgallery img    { margin-left: 160px; margin-top: 80px; }
+.aqugallery img    { margin-left: 560px; margin-top: -220px; }
+.phogallery img    { margin-left: 960px; margin-top: -220px; }
+
+/* ---- Row 3: Pisces, Leo, Virgo ---- */
+.pisgallery img    { margin-left: 160px; margin-top: 80px; }
+.leogallery img    { margin-left: 560px; margin-top: -220px; }
+.virgogallery img  { margin-left: 960px; margin-top: -220px; }
+
+/* ---- Row 4: Scorpio, Sagittarius, Capricorn ---- */
+.scorpiogallery img     { margin-left: 160px; margin-top: 80px; }
+.sagittariusgallery img { margin-left: 560px; margin-top: -220px; }
+.capricorngallery img   { margin-left: 960px; margin-top: -220px; }
+
+/* ---- Row 5: Orion, Ursa Major ---- */
+.oriongallery img  { margin-left: 160px; margin-top: 80px; }
+.ursagallery img   { margin-left: 560px; margin-top: -220px; }
+
+/* ---- Modals ---- */
+.modal, .amodal, .gmodal, .lmodal, .aqmodal, .phmodal,
+.pimodal, .lemodal, .vimodal, .scmodal, .samodal,
+.camodal, .ormodal, .urmodal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+.modal:target, .amodal:target, .gmodal:target, .lmodal:target,
+.aqmodal:target, .phmodal:target, .pimodal:target, .lemodal:target,
+.vimodal:target, .scmodal:target, .samodal:target, .camodal:target,
+.ormodal:target, .urmodal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content, .modal-a-content, .modal-g-content, .modal-l-content,
+.modal-aq-content, .modal-ph-content, .modal-pi-content, .modal-le-content,
+.modal-vi-content, .modal-sc-content, .modal-sa-content, .modal-ca-content,
+.modal-or-content, .modal-ur-content {
+    position: relative;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 20px;
+    width: 600px;
+    max-width: 90%;
+    box-shadow: 0 6px 15px rgba(21,43,68,0.4);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    animation: zoom 0.3s ease;
+}
+
+.close, .aclose, .gclose, .lclose, .aqclose, .phclose,
+.piclose, .leclose, .viclose, .scclose, .saclose, .caclose,
+.orclose, .urclose {
+    position: absolute;
+    top: 10px; right: 15px;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    background: red;
+    border-radius: 5px;
+    padding: 2px 8px;
+    font-weight: bold;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.5); }
+    to   { transform: scale(1); }
+}
+
+/* ================================================
+   MEDIA QUERIES
+   ================================================ */
+
+@media (max-width: 480px) {
+    .navbar { justify-content: center; flex-wrap: wrap; padding: 10px 15px; position: relative; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .nav-links a { font-size: 13px; }
+    .gallery img, .agallery img, .gemgallery img,
+    .libgallery img, .aqugallery img, .phogallery img,
+    .pisgallery img, .leogallery img, .virgogallery img,
+    .scorpiogallery img, .sagittariusgallery img, .capricorngallery img,
+    .oriongallery img, .ursagallery img {
+        width: 90%; height: auto;
+        margin-left: auto; margin-right: auto;
+        margin-top: 15px; display: block;
+    }
+    footer { margin-top: 40px; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .navbar { justify-content: space-between; padding: 8px 15px; }
+    .nav-links { gap: 15px; }
+    .nav-links a { font-size: 14px; }
+    .gallery img, .agallery img, .gemgallery img,
+    .libgallery img, .aqugallery img, .phogallery img,
+    .pisgallery img, .leogallery img, .virgogallery img,
+    .scorpiogallery img, .sagittariusgallery img, .capricorngallery img,
+    .oriongallery img, .ursagallery img {
+        width: 46%; height: 200px;
+        margin-top: 15px; display: inline-block;
+        margin-left: 2%; margin-right: 0;
+    }
+    footer { margin-top: 40px; }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .navbar { padding: 8px 20px; }
+    .nav-links { gap: 110px; }
+    .nav-links a { font-size: 15px; }
+    .gallery img, .agallery img, .gemgallery img,
+    .libgallery img, .aqugallery img, .phogallery img,
+    .pisgallery img, .leogallery img, .virgogallery img,
+    .scorpiogallery img, .sagittariusgallery img, .capricorngallery img,
+    .oriongallery img, .ursagallery img {
+        width: 300px; height: 225px;
+    }
+    .gallery img       { margin: 60px 0 0 50px; }
+    .agallery img      { margin-left: 380px; margin-top: -225px; }
+    .gemgallery img    { margin-left: 710px; margin-top: -225px; }
+    .libgallery img    { margin-left: 50px; margin-top: 60px; }
+    .aqugallery img    { margin-left: 380px; margin-top: -225px; }
+    .phogallery img    { margin-left: 710px; margin-top: -225px; }
+    .pisgallery img    { margin-left: 50px; margin-top: 60px; }
+    .leogallery img    { margin-left: 380px; margin-top: -225px; }
+    .virgogallery img  { margin-left: 710px; margin-top: -225px; }
+    .scorpiogallery img     { margin-left: 50px; margin-top: 60px; }
+    .sagittariusgallery img { margin-left: 380px; margin-top: -225px; }
+    .capricorngallery img   { margin-left: 710px; margin-top: -225px; }
+    .oriongallery img  { margin-left: 50px; margin-top: 60px; }
+    .ursagallery img   { margin-left: 380px; margin-top: -225px; }
+    footer { margin-top: 80px; }
+}
+
+@media (min-width: 1800px) {
+    .gallery img       { margin: 80px 0 0 260px; }
+    .agallery img      { margin-left: 710px; margin-top: -300px; }
+    .gemgallery img    { margin-left: 1160px; margin-top: -300px; }
+    .libgallery img    { margin-left: 260px; margin-top: 80px; }
+    .aqugallery img    { margin-left: 710px; margin-top: -300px; }
+    .phogallery img    { margin-left: 1160px; margin-top: -300px; }
+    .pisgallery img    { margin-left: 260px; margin-top: 80px; }
+    .leogallery img    { margin-left: 710px; margin-top: -300px; }
+    .virgogallery img  { margin-left: 1160px; margin-top: -300px; }
+    .scorpiogallery img     { margin-left: 260px; margin-top: 80px; }
+    .sagittariusgallery img { margin-left: 710px; margin-top: -300px; }
+    .capricorngallery img   { margin-left: 1160px; margin-top: -300px; }
+    .oriongallery img  { margin-left: 260px; margin-top: 80px; }
+    .ursagallery img   { margin-left: 710px; margin-top: -300px; }
+}
+
+/* ---- GRID LAYOUT - perfectly equal boxes ---- */
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 110px;
+    padding: 60px 80px 80px;
+    justify-content: center;
+}
+
+.cell {
+    width: 400px;
+    height: 300px;
+}
+
+.cell a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.cell img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.cell img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    .grid-wrapper { grid-template-columns: 1fr; padding: 20px 15px; gap: 15px; }
+    .cell { width: 100%; height: 220px; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .grid-wrapper { grid-template-columns: repeat(2, 1fr); padding: 20px; gap: 15px; }
+    .cell { width: 100%; height: 220px; }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .grid-wrapper { grid-template-columns: repeat(3, 280px); gap: 15px; padding: 40px 0; }
+    .cell { width: 280px; height: 210px; }
+}
